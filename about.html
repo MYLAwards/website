@@ -120,7 +120,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-fluid rounded-circle mx-auto d-block my-4" src="https://akaban01.github.io/myla/pics/rabia.jpg" alt="Card image">
+                    <img class="img-fluid rounded-circle mx-auto d-block my-4" data-src="https://akaban01.github.io/myla/pics/rabia.jpg" alt="Card image">
                 </div>
                 <div class="col-md-8">
                     <h4 class="display-5">Rabia Mumtaz - President</h4>
@@ -149,7 +149,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-fluid rounded-circle mx-auto d-block my-4" src="https://akaban01.github.io/myla/pics/ather.jpg"
+                    <img class="img-fluid rounded-circle mx-auto d-block my-4" data-src="https://akaban01.github.io/myla/pics/ather.jpg"
                         alt="Card image">
                 </div>
                 <div class="col-md-8">
@@ -179,7 +179,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-fluid rounded-circle mx-auto d-block my-4" src="https://akaban01.github.io/myla/pics/aisha.jpg"
+                    <img class="img-fluid rounded-circle mx-auto d-block my-4" data-src="https://akaban01.github.io/myla/pics/aisha.jpg"
                         alt="Card image">
                 </div>
                 <div class="col-md-8">
@@ -212,7 +212,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-fluid rounded-circle mx-auto d-block my-4" src="https://akaban01.github.io/myla/pics/sumran.jpg"
+                    <img class="img-fluid rounded-circle mx-auto d-block my-4" data-src="https://akaban01.github.io/myla/pics/sumran.jpg"
                         alt="Card image">
                 </div>
                 <div class="col-md-8">
@@ -243,7 +243,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-fluid rounded-circle mx-auto d-block my-4" src="https://akaban01.github.io/myla/pics/sami.jpg" alt="Card image">
+                    <img class="img-fluid rounded-circle mx-auto d-block my-4" data-src="https://akaban01.github.io/myla/pics/sami.jpg" alt="Card image">
                 </div>
                 <div class="col-md-8">
                     <h4 class="display-5">Sami Khwaja - Endowment Director</h4>
@@ -271,7 +271,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-fluid rounded-circle mx-auto d-block my-4" src="https://akaban01.github.io/myla/pics/reies.jpg" alt="Card image">
+                    <img class="img-fluid rounded-circle mx-auto d-block my-4" data-src="https://akaban01.github.io/myla/pics/reies.jpg" alt="Card image">
                 </div>
                 <div class="col-md-8">
                     <h4 class="display-5">Reies Romero - Marketing </h4>
@@ -301,7 +301,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-fluid rounded-circle mx-auto d-block my-4" src="https://akaban01.github.io/myla/pics/faizan.png" alt="Card image">
+                    <img class="img-fluid rounded-circle mx-auto d-block my-4" data-src="https://akaban01.github.io/myla/pics/faizan.png" alt="Card image">
                 </div>
                 <div class="col-md-8">
                     <h4 class="display-5">Faizan Rauf - Web Developer</h4>
@@ -359,6 +359,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script>
+        JqueryFuncs.push(function() { 
+            $(img).each(function() {
+                $(this).attr("src",$(this).attr("data-src"));
+            });
+        
+        });
+            
+    </script>
     <script>
     for(var i = 0; i < JqueryFuncs.length; i++){JqueryFuncs[i]();}
     </script>
