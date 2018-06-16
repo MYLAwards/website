@@ -1,1 +1,0 @@
-$( "#app-stat" ).load( "/app-stat" );
