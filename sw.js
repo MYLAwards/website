@@ -10,7 +10,7 @@ var filesToCache = [
  '/endowment',
  '/contact',
 
- 'myla.js',
+ '/myla.js',
 
  '/components/bootstrap.min.js',
  '/components/final-logo-myla-01.png',
