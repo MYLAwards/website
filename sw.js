@@ -1,27 +1,27 @@
+console.log('in SW js');
 var cacheName = 'myla-cache';
 var filesToCache = [
- '/',
- '/about',
- '/programs',
- '/mscholarship',
- '/loan',
- '/ischolarship',
- '/donate',
- '/endowment',
- '/contact',
+ '',
+ 'about',
+ 'programs',
+ 'mscholarship',
+ 'loan',
+ 'ischolarship',
+ 'donate',
+ 'endowment',
+ 'contact',
 
- '/myla.js',
+ 'myla.js',
 
- '/components/bootstrap.min.js',
- '/components/final-logo-myla-01.png',
- '/components/font-awesome.min.css',
- '/components/jquery-3.2.1.slim.min.js',
- '/components/odometer.css',
- '/components/odometer.js',
- '/components/popper.min.js',
- '/components/style.css',
- '/components/theme.css',
- '/scripts/app.js'
+ 'components/bootstrap.min.js',
+ 'components/final-logo-myla-01.png',
+ 'components/font-awesome.min.css',
+ 'components/jquery-3.2.1.slim.min.js',
+ 'components/odometer.css',
+ 'components/odometer.js',
+ 'components/popper.min.js',
+ 'components/style.css',
+ 'components/theme.css'
 ];
 
 self.addEventListener('install', function(e) {
@@ -49,12 +49,14 @@ self.addEventListener('activate', function(e) {
  return self.clients.claim();
 });
 
-self.addEventListener('fetch', function(e) {
- e.respondWith(
-  caches.open(cacheName).then(function(cache) {
-   return fetch(e.request).then(function(response){
-     cache.put(e.request.url, response.clone());
+self.addEventListener('fetch', function(event) {
+ event.respondWith(
+  caches.match(event.request).then(function(resp) {
+   return resp || fetch(event.request).then(function(response) {
+    return caches.open(cacheName).then(function(cache) {
+     cache.put(event.request, response.clone());
      return response;
+    });  
    });
   })
  );
