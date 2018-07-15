@@ -1,4 +1,4 @@
-var cacheName = 'static-1.4';
+var cacheName = 'static-1.5';
 var filesToCache = [
  '/',
  'about',
@@ -38,6 +38,7 @@ var filesToCache = [
 
 self.addEventListener('install', function (e) {
  console.log('[ServiceWorker] Install');
+ self.skipWaiting();
  e.waitUntil(
   caches.open(cacheName).then(function (cache) {
    console.log('[ServiceWorker] Caching app shell');
