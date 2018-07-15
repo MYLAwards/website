@@ -1,7 +1,7 @@
 console.log('in SW js');
 var cacheName = 'static-1';
 var filesToCache = [
- '',
+ '/',
  'about',
  'programs',
  'mscholarship',
