@@ -10,6 +10,7 @@ var filesToCache = [
  'donate',
  'endowment',
  'contact',
+ 'offline.html',
 
  'myla.js',
 
@@ -50,21 +51,21 @@ self.addEventListener('activate', function (e) {
 });
 
 self.addEventListener('fetch', function (e) {
- e.respondWith(
-  caches.open(cacheName).then(function (cache) {
-   return fetch(e.request).then(function (response) {
-    cache.put(e.request.url, response);
-    return response.clone();
-   }).catch(function (err) {
-     return caches.match(e.request).then(function (res) {
-      if (res === undefined) {
-       if(!navigator.onLine){
-        return caches.match("offline");
+  e.respondWith(
+   caches.open(cacheName).then(function (cache) {
+    return fetch(e.request).then(function (response) {
+     //cache.put(e.request.url, response.clone());
+     return response;
+    }).catch(function (err) {
+      return caches.match(e.request).then(function (res) {
+       if (res === undefined) {
+        if(!navigator.onLine){
+         return caches.match("offline.html");
+        }
        }
-      }
-      return res;
+       return res;
+      })
      })
-    })
-  })
- );
-});
+   })
+  );
+ });
