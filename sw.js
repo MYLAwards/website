@@ -1,4 +1,4 @@
-var cacheName = 'static-1.2';
+var cacheName = 'static-1.3';
 var filesToCache = [
  '/',
  'about',
@@ -63,21 +63,9 @@ self.addEventListener('activate', function (e) {
 
 self.addEventListener('fetch', function (e) {
   e.respondWith(
-   caches.open(cacheName).then(function (cache) {
-    return fetch(e.request).then(function (response) {
-     //cache.put(e.request.url, response.clone());
-     return response;
-    }).catch(function (err) {
-      return caches.match(e.request).then(function (res) {
-       if (res === undefined) {
-        if(!navigator.onLine && e.request.url.indexOf("google") === -1){
-         return caches.match("offline.html");
-        }
-        console.log("trying to retrieve from cache but not found :" + e.request.url);
-       }
-       return res;
-      })
-     })
-   })
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
   );
  });
+ 
