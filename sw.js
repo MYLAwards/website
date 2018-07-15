@@ -1,5 +1,5 @@
 console.log('in SW js');
-var cacheName = 'static-1.0';
+var cacheName = 'static-1.1';
 var filesToCache = [
  '/',
  'about',
@@ -63,7 +63,6 @@ self.addEventListener('activate', function (e) {
 });
 
 self.addEventListener('fetch', function (e) {
-  console.log(e.request.url);
   e.respondWith(
    caches.open(cacheName).then(function (cache) {
     return fetch(e.request).then(function (response) {
