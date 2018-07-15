@@ -1,5 +1,4 @@
-console.log('in SW js');
-var cacheName = 'static-1.1';
+var cacheName = 'static-1.2';
 var filesToCache = [
  '/',
  'about',
@@ -23,18 +22,18 @@ var filesToCache = [
  'components/popper.min.js',
  'components/style.css',
  'components/theme.css',
- '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
- '//images.mylawards.org/final-logo-myla-01.png',
- '//images.mylawards.org/broali.svg',
- '//images.mylawards.org/rabia.jpg',
- '//images.mylawards.org/ather.jpg',
- '//images.mylawards.org/aisha.jpg',
- '//images.mylawards.org/sumran.jpg',
- '//images.mylawards.org/sami.jpg',
- '//images.mylawards.org/reies.jpg',
- '//images.mylawards.org/faizan.png',
+ 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+ 'https://images.mylawards.org/final-logo-myla-01.png',
+ 'https://images.mylawards.org/broali.svg',
+ 'https://images.mylawards.org/rabia.jpg',
+ 'https://images.mylawards.org/ather.jpg',
+ 'https://images.mylawards.org/aisha.jpg',
+ 'https://images.mylawards.org/sumran.jpg',
+ 'https://images.mylawards.org/sami.jpg',
+ 'https://images.mylawards.org/reies.jpg',
+ 'https://images.mylawards.org/faizan.png',
 
- '//code.jquery.com/jquery-3.2.1.min.js'
+ 'https://code.jquery.com/jquery-3.2.1.min.js'
 ];
 
 self.addEventListener('install', function (e) {
