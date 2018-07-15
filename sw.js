@@ -1,4 +1,4 @@
-var cacheName = 'static-1.3';
+var cacheName = 'static-1.4';
 var filesToCache = [
  '/',
  'about',
