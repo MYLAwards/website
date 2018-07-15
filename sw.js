@@ -56,7 +56,7 @@ self.addEventListener('fetch', function (e) {
     cache.put(e.request.url, response.clone());
     return response;
    }).catch(function (err) {
-     return caches.match(event.request).then(function (res) {
+     return caches.match(e.request).then(function (res) {
       if (res === undefined) {
        if(!navigator.onLine){
         return caches.match("offline");
