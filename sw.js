@@ -1,4 +1,4 @@
-var cacheName = 'static-1.6';
+var cacheName = 'static-1.7';
 var filesToCache = [
  '/',
  'about',
@@ -25,6 +25,8 @@ var filesToCache = [
  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
  'https://images.mylawards.org/final-logo-myla-01.png',
  'https://images.mylawards.org/broali.svg',
+ 'https://images.mylawards.org/banner.jpg',
+ 'https://images.mylawards.org/endowment.png',
  'https://images.mylawards.org/rabia.jpg',
  'https://images.mylawards.org/ather.jpg',
  'https://images.mylawards.org/aisha.jpg',
