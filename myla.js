@@ -1,3 +1,4 @@
+var cacheName = "sv-1";
 if ('serviceWorker' in navigator) {
  navigator.serviceWorker
           .register('./sw.js')
