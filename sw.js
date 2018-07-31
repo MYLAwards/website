@@ -1,4 +1,4 @@
-var cacheName = 'static-1.9';
+var cacheName = 'static-2';
 var filesToCache = [
  '/',
  'about',
@@ -50,6 +50,7 @@ self.addEventListener('install', function (e) {
 });
 
 self.addEventListener('activate', function (e) {
+ self.skipWaiting();
  console.log('[ServiceWorker] Activate');
  e.waitUntil(
   caches.keys().then(function (keyList) {
