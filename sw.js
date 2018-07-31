@@ -1,4 +1,4 @@
-var cacheName = "sv-1";
+var cacheName = "sv-1.0";
 var filesToCache = [
  '/',
  'about',
