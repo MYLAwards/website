@@ -1,17 +1,17 @@
 var cacheName = 'static-2.0';
 var filesToCache = [
- '/'
-//  'about',
-//  'programs',
-//  'mscholarship',
-//  'loan',
-//  'ischolarship',
-//  'donate',
-//  'endowment',
-//  'contact',
-//  'offline',
+ '/',
+ 'about',
+ 'programs',
+ 'mscholarship',
+ 'loan',
+ 'ischolarship',
+ 'donate',
+ 'endowment',
+ 'contact',
+ 'offline',
 
-//  'myla.js',
+  'myla.js'
 
 //  'components/bootstrap.min.js',
 //  'components/final-logo-myla-01.png',
