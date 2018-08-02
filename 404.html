@@ -1,59 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114790632-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-114790632-1');
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics End -->
-
-<title>MYLA</title>
-<link rel="shortcut icon" type="image/png" href="//images.mylawards.org/icon.png" />
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-
-<link rel="stylesheet" href="components/theme.css">
-<link rel="stylesheet" href="components/style.css">
-<script>
-        var JqueryFuncs = [];
-    </script>
-<body>
-<header>
-<div class="py-4">
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<a href="/"> <img class="img-fluid d-block mx-auto" src="//images.mylawards.org/final-logo-myla-01.png"> </a> </div>
-</div>
-</div>
-</div>
-<nav class="navbar navbar-expand bg-light navbar-light">
-<div class="container">
-<div class="navbar-collapse text-center justify-content-center">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="/">Home</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="/programs">Programs</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="/donate">Donate</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="/contact">Contact</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-</header><div class="py-4 text-center">
+---
+---
+{% include header.html %}
+<div class="py-4 text-center">
 <div class="container">
 <div class="row">
 <div class="col-12">
@@ -65,41 +13,4 @@
 </div>
 </div>
 </div>
-<footer>
-<div class="py-4 bg-dark text-white">
-<div class="container">
-<div class="row">
-<div id="mc_embed_signup" class="col-12">
-<p class="lead text-center">Sign up to our newsletter</p>
-<form class="form-inline justify-content-center validate" action="https://mylawards.us7.list-manage.com/subscribe/post?u=74004b853ac2bd46e76b96ba7&amp;id=93c256bffc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-<input type="email" class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="Your e-mail here">
-<input type="submit" class="btn btn-primary my-2 mx-2" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
-<div id="mce-responses" class="clear">
-<div class="response" id="mce-error-response" style="display:none"></div>
-<div class="response" id="mce-success-response" style="display:none"></div>
-</div>
-<div style="position: absolute; left: -5000px;" aria-hidden="true">
-<input type="text" name="b_74004b853ac2bd46e76b96ba7_93c256bffc" tabindex="-1" value="">
-</div>
-</form>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12 mt-3 text-center">
-<p>© Copyright
-<script type="text/javascript">
-                                document.write(new Date().getFullYear());
-                            </script> MYLA - All rights reserved.</p>
-</div>
-</div>
-</div>
-</div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-<script>
-    for(var i = 0; i < JqueryFuncs.length; i++){JqueryFuncs[i]();}
-    </script>
-</body>
-</html>
+{% include footer.html %}
