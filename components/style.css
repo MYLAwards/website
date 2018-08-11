@@ -25,3 +25,6 @@ hr {
 .bs-wizard-info{
     font-size: 0.8rem;
 }
+.card{
+ border-radius: 2.25rem; 
+}
