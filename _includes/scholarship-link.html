@@ -1,3 +1,12 @@
 <p class="font-italic font-weight-light">Application will be opened on January 1st.</p>
-<a href="https://app.smarterselect.com/programs/56271-Myla-Scholarship" class="btn btn-primary disabled">Scholarship Application</a>
+<a id="app-btn" href="https://app.smarterselect.com/programs/56271-Myla-Scholarship" class="btn btn-primary">Scholarship Application</a>
 <a href="/donate" class="btn btn-primary">Make a Donation</a>
+<script async>
+setTimeout(function enableDisableAppLink(){
+    var month = new Date().getMonth()+1;
+    if(month>3){
+        /*only allow app link to work between jan and mar*/
+        document.getElementById("app-btn").classList.add("disabled");
+    }
+},0);
+</script>
