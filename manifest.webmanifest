@@ -1,0 +1,20 @@
+{"dir" : "ltr",
+  "lang" : "English",
+  "name" : "MYLA - Muslim Youth Leadership Awards",
+  "scope" : "/",
+  "display" : "browser",
+  "start_url" : "https://mylawards.org/",
+  "short_name" : "MYLA",
+  "theme_color" : "transparent",
+  "description" : "We Identify, Develop, Connect future leaders by providing scholarships, educational/skill building activities and programs for individuals who have a track record and continued commitment for community service.",
+  "orientation" : "any",
+  "background_color" : "transparent",
+  "related_applications" : "",
+  "prefer_related_applications" : "false",
+  "generated" : "true",
+  "icons" : [
+      {
+          "src": "https://images.mylawards.org/icon.png",
+          "sizes": "23x16"
+      }
+  ]}
