@@ -2,7 +2,7 @@
   "lang" : "English",
   "name" : "MYLA - Muslim Youth Leadership Awards",
   "scope" : "/",
-  "display" : "browser",
+  "display" : "standalone",
   "start_url" : "https://mylawards.org/",
   "short_name" : "MYLA",
   "theme_color" : "transparent",
