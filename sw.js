@@ -32,7 +32,6 @@ var filesToCache = [
   'https://images.mylawards.org/sumran.jpg',
   'https://images.mylawards.org/sami.jpg',
   'https://images.mylawards.org/reies.jpg',
-  'https://images.mylawards.org/faizan.png',
 
   'https://code.jquery.com/jquery-3.2.1.min.js'
 ];
