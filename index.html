@@ -60,9 +60,9 @@
             <p class="">This is the last session of MYLA's series of StrengthsFinder Workshops this year.
               Its mandatory for MYLA recipients for the year 2018-2019.
             </p>
-            <p class="lead  mb-0"><i class="fa fa-calendar" aria-hidden="true"></i> Saturday, November 3rd</p>
-            <p class="lead  mb-0"><i class="fa fa-clock-o" aria-hidden="true"></i> 9:00 a.m. to 12:30 p.m.</p>
-            <p class="lead"><i class="fa fa-map-marker" aria-hidden="true"></i> Champlin Meeting Room
+            <p class="lead  mb-0"><i class="fa-solid fa-calendar" aria-hidden="true"></i> Saturday, November 3rd</p>
+            <p class="lead  mb-0"><i class="fa-regular fa-clock" aria-hidden="true"></i> 9:00 a.m. to 12:30 p.m.</p>
+            <p class="lead"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Champlin Meeting Room
                 <a href="https://www.google.com/maps/place/12154+Ensign+Ave+N,+Champlin,+MN+55316/@45.1747402,-93.3961549,17z/data=!3m1!4b1!4m5!3m4!1s0x52b33ecd3bd24593:0x4b95bee7223918d1!8m2!3d45.1747402!4d-93.3939662">12154 Ensign Ave. N
                 Champlin, MN 55316</a></p>
           </div>
@@ -100,7 +100,7 @@
 <div class="py-4">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 pb-3 pr-0">
+            <div class="col-lg-4 pb-3 pe-0">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title display-5">General Scholarship</h5>
@@ -114,7 +114,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 pb-3 pr-0">
+            <div class="col-lg-4 pb-3 pe-0">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title display-5">Interest-free Loans</h5>
@@ -199,18 +199,24 @@
 <script src="components/odometer.js"></script>
 <script>
     JqueryFuncs.push(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() >= $('#SchDis').offset().top - $(this).height()) {
-                setTimeout(function () {
-                    $('#SchDis').html("488110");
-                    $('#SchAnn').html("30000");
-                    $('#SchInd').html("177");
-                }, 0);
+        var animated = false;
+        function animateStats() {
+            if (animated) return;
+            var el = document.getElementById('SchDis');
+            if (!el) return;
+            // Trigger once the stats section scrolls into view.
+            if (el.getBoundingClientRect().top <= window.innerHeight) {
+                animated = true;
+                // Assigning innerHTML re-runs the odometer animation to the final value.
+                document.getElementById('SchDis').innerHTML = "488110";
+                document.getElementById('SchAnn').innerHTML = "30000";
+                document.getElementById('SchInd').innerHTML = "177";
+                window.removeEventListener('scroll', animateStats);
             }
-        });
-
+        }
+        window.addEventListener('scroll', animateStats, { passive: true });
+        animateStats(); // in case the section is already visible on load
     });
-
 </script>
 <!-- odometer resources end-->
 {% include footer.html %}

@@ -4,10 +4,10 @@
    <div class="row">
     <div id="mc_embed_signup" class="col-12">
      <p class="lead text-center">Sign up to our newsletter</p>
-     <form class="form-inline justify-content-center validate" action="https://mylawards.us20.list-manage.com/subscribe/post?u=13239ef5de3cb3ee92ab0c778&amp;id=c9d17329ba"
+     <form class="d-flex flex-wrap justify-content-center align-items-center gap-2 validate" action="https://mylawards.us20.list-manage.com/subscribe/post?u=13239ef5de3cb3ee92ab0c778&amp;id=c9d17329ba"
       method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
 
-      <input type="email" class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="Your e-mail here">
+      <input type="email" class="form-control w-auto" name="EMAIL" id="mce-EMAIL" placeholder="Your e-mail here">
       <input type="submit" class="btn btn-primary my-2 mx-2" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
       <div id="mce-responses" class="clear">
        <div class="response" id="mce-error-response" style="display:none"></div>
@@ -21,10 +21,8 @@
    </div>
    <div class="row">
     <div class="col-md-12 mt-3 text-center">
-     <p>© Copyright
-      <script type="text/javascript">
-       setTimeout(document.write(new Date().getFullYear()),0);
-      </script> MYLA - All rights reserved.</p>
+     <p>&copy; Copyright <span id="copyright-year"></span> MYLA - All rights reserved.</p>
+     <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
     </div>
    </div>
   </div>
@@ -32,10 +30,9 @@
 
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script>
+ // Run any init functions registered by individual pages (plain JS, no jQuery).
  for (var i = 0; i < JqueryFuncs.length; i++) { JqueryFuncs[i](); }
 </script>
 <script defer src="pwa/pwabuilder-sw-register.js"></script>
