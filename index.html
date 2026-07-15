@@ -1,6 +1,81 @@
----
----
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MYLA - Muslim Youth Leadership Awards</title>
+  <meta name="description" content="We Identify, Develop, Connect future leaders by providing scholarships, educational/skill building activities and programs for individuals who have a track record and continued commitment for community service.">
+  <link rel="canonical" href="https://mylawards.org/">
+  <link rel="shortcut icon" type="image/png" href="//images.mylawards.org/icon.png" />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="components/style.css">
+
+  <link rel="manifest" href="pwa/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    var JqueryFuncs = [];
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="/">
+              <img class="img-fluid d-block mx-auto" src="//images.mylawards.org/final-logo-myla-01.png"> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="my-1 navbar navbar-expand-sm bg-light navbar-light">
+      <button class="navbar-toggler mx-auto px-5 border-0 w-100" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+      </button>
+      <div class="container">
+        <div class="navbar-collapse collapse text-center justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/programs.html">Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/blogs.html">Newsletters</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="/donate.html">Donate</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="py-4">
+    <div class="container">
+      <div class="card card-body bg-light">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="display-4">This Site Is Legacy</h2>
+            <p class="lead mb-0">MYLA has merged with ACC Educate. To learn more and apply for programs, please visit <a href="https://acceducate.org/" target="_blank" rel="noopener">acceducate.org</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- <div class="py-4">
     <div class="container">
         <div class="card card-body bg-light">
@@ -108,8 +183,8 @@
                             attending an accredited higher education institution
                             in the state of Minnesota during the entire current academic school year may benefit from
                             this scholarship program.</p>
-                        {% include applink-message.html %}
-                        {% include applink-scholar-btn.html %}
+                        <!-- <p class="font-italic font-weight-light">Applications has been closed for this year. New applications will be available from January.</p> -->
+                        <a target="_blank" href="https://acceducate.org/apply" class="btn btn-primary app-btn">Application Form</a>
                         <a href="/mscholarship.html" class="btn btn-primary">Learn more</a>
                     </div>
                 </div>
@@ -124,8 +199,8 @@
                             support to complete
                             their degree, or to graduates who have finished their higher education but have unpaid
                             interest-based loans.</p>
-                        {% include applink-message.html %}
-                        {% include applink-scholar-btn.html %}
+                        <!-- <p class="font-italic font-weight-light">Applications has been closed for this year. New applications will be available from January.</p> -->
+                        <a target="_blank" href="https://acceducate.org/apply" class="btn btn-primary app-btn">Application Form</a>
                         <a href="/loan.html" class="btn btn-primary">Learn more</a>
                     </div>
                 </div>
@@ -137,8 +212,8 @@
                         <p class="card-text lead">High school graduates who are seeking an Islamic Education degree as
                             a full-time student from an accredited Islamic
                             Education institution may benefit from this scholarship program.</p>
-                        {% include applink-message.html %}
-                        {% include applink-scholar-btn.html %}
+                        <!-- <p class="font-italic font-weight-light">Applications has been closed for this year. New applications will be available from January.</p> -->
+                        <a target="_blank" href="https://acceducate.org/apply" class="btn btn-primary app-btn">Application Form</a>
                         <a href="ischolarship.html" class="btn btn-primary">Learn more</a>
                     </div>
                 </div>
@@ -192,7 +267,19 @@
     </div>
 </div>
 <!-- enable/disable app buttons -->
-{% include applink-logic.html %}
+<script async>
+    /*this code to disable application button automatically. but now we decided not to disable it*/
+    // setTimeout(function enableDisableAppLink() {
+    //     var month = new Date().getMonth() + 1;
+    //     if (month > 3) {
+    //         /*only allow app link to work between jan and mar*/
+    //         let = appBtn = document.getElementsByClassName("app-btn");
+    //         for (let i = 0; i < appBtn.length; i++) {
+    //             appBtn[i].classList.add("disabled");
+    //         }
+    //     }
+    // }, 0);
+</script>
 <!-- enable/disable buttons end-->
 <!-- odometer resources -->
 <link rel="stylesheet" href="components/odometer.css">
@@ -219,4 +306,44 @@
     });
 </script>
 <!-- odometer resources end-->
-{% include footer.html %}
+<footer>
+ <div class="py-4 bg-dark text-white">
+  <div class="container">
+   <div class="row">
+    <div id="mc_embed_signup" class="col-12">
+     <p class="lead text-center">Sign up to our newsletter</p>
+     <form class="d-flex flex-wrap justify-content-center align-items-center gap-2 validate" action="https://mylawards.us20.list-manage.com/subscribe/post?u=13239ef5de3cb3ee92ab0c778&amp;id=c9d17329ba"
+      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+
+      <input type="email" class="form-control w-auto" name="EMAIL" id="mce-EMAIL" placeholder="Your e-mail here">
+      <input type="submit" class="btn btn-primary my-2 mx-2" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+      <div id="mce-responses" class="clear">
+       <div class="response" id="mce-error-response" style="display:none"></div>
+       <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+       <input type="text" name="b_74004b853ac2bd46e76b96ba7_93c256bffc" tabindex="-1" value="">
+      </div>
+     </form>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12 mt-3 text-center">
+     <p>&copy; Copyright <span id="copyright-year"></span> MYLA - All rights reserved.</p>
+     <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
+    </div>
+   </div>
+  </div>
+ </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+ // Run any init functions registered by individual pages (plain JS, no jQuery).
+ for (var i = 0; i < JqueryFuncs.length; i++) { JqueryFuncs[i](); }
+</script>
+<script defer src="pwa/pwabuilder-sw-register.js"></script>
+</body>
+
+</html>
